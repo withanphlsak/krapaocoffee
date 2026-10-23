@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #640303;
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+.hero {
+    position: relative;
+    height: clamp(18rem, 45vw, 50rem);
+}
+
+.imgback {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 1rem;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.25rem clamp(1rem, 4vw, 3rem);
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+}
+
+.logo-link {
+    text-decoration: none;
+    display: block;
+    align-items: baseline;
+    gap: 0.4rem;
+    font-size: clamp(1.1rem, 2.5vw, 2rem);
+    white-space: nowrap;
+    margin-left: 2rem;
+}
+
+.logo {
+    color: #f2efef;
+    font-weight: bold;
+    font-size: 1em;
+    font-family: "Noto Sans Thai Looped", sans-serif;
+}
+
+.logo2 {
+    color: #ec9e9e;
+    font-weight: bold;
+    font-size: 1em;
+    font-family: "Noto Sans Thai Looped", sans-serif;
+}
+
+.logo-text img{
+    border-radius: 10px;
+    height: clamp(56px, 8vw, 105px);
+    width: auto;
+    margin-right: 1rem;
+}
+
+.link-nav {
+    display: flex;
+    align-items: center;
+}
+
+.link-nav1 {
+    text-decoration: none;
+    padding: 0.5rem clamp(0.5rem, 1.2vw, 1.25rem);
+    font-weight: bold;
+    font-size: clamp(0.8rem, 1.1vw, 1rem);
+    color: #fff;
+    white-space: nowrap;
+}
+
+.link-nav1:hover {
+    background-color: #1abc1a;
+    color: #e7f5e4;
+    border-radius: 0.3125rem;
+    transition: 0.3s;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.3125rem;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+}
+
+.menu-toggle span {
+    width: 1.5625rem;
+    height: 0.1875rem;
+    background-color: #fff;
+    border-radius: 0.1875rem;
+}
+
+/* จอแคบ: เมนูเป็น hamburger */
+@media (max-width: 1100px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .link-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 0.5rem 1rem 1rem;
+    }
+
+    .link-nav.active {
+        display: flex;
+    }
+
+    .link-nav1 {
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+        white-space: normal;
+    }
+}
+
+.content {
+    width: 100%;
+    max-width: 1640px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    padding: 0 clamp(1rem, 4vw, 3rem);
+    z-index: 1000000;
+}
+
+.menu-title {
+    font-size: clamp(1.6rem, 4vw, 2.5rem);
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem 0 1rem;
+    position: relative;
+}
+
+.menu-title2 {
+    font-size: clamp(1.6rem, 4vw, 2.5rem);
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem 0 1rem;
+    margin-top: 15rem;
+    position: relative;
+}
+
+.sell-on {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+    gap: 1rem;
+    margin-top: clamp(-6rem, -8vw, -1.5rem);
+    position: relative;
+    z-index: 10;
+}
+
+.sell-on-menu {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.sell-on-img img {
+    height: clamp(56px, 8vw, 105px);
+    width: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    display: block;
+}
+
+.sell-on-img2 img{
+    border: 3px solid black;
+    height: clamp(50px, 6vw, 105px);
+    width: auto;
+    object-fit: contain;
+    
+    display: block;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(0.5rem, 1.5vw, 1rem);
+    padding: clamp(1rem, 3vw, 3rem) 0;
+}
+
+.in-menu {
+    border: clamp(4px, 0.8vw, 10px) solid #fff;
+    background-color: #fff;
+    padding: 1.25rem 1.25rem clamp(3rem, 2vw, 18rem);
+    min-width: 0;
+}
+
+.img-grid {
+    width: 100%;
+    height: 35.625rem;
+
+}
+
+.descr {
+    color: #242424;
+    font-size: 2rem;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+.ar-ti-by {
+    font-size: clamp(1.5rem, 3vw, 1.5rem);
+    font-weight: 400;
+}
+
+.price {
+    font-size: clamp(2rem, 3vw, 2rem);
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+.loca-link {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7rem;
+    max-width: 100%;
+    margin: 2.5rem 0 4rem;
+}
+
+.loca-link-in {
+    display: block;
+    border: 5px solid #218f02;
+    border-radius: 20px;
+    background-color: #d98105;
+    color: #fcfcfc;
+    padding: clamp(2rem, 6vw, 6rem) clamp(1.5rem, 12vw, 18rem);
+    text-decoration: none;
+    transition: 0.3s;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+
+}
+
+.loca-link-in:hover {
+    transform: scale(1.03);
+    border: 5px solid #860000;
+    background-color: #e7c104;
+}
+
+.loca-link-in-text1 {
+    font-size: 2rem;
+}
+
+.loca-link-in-text2 {
+    font-size: 1.5rem;
+}
+
+.open {
+    font-size: 3rem;
+
+}
+
+
+.close-open {
+    text-align: center;
+}
+
+.open-close {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    border-bottom: 1px solid #e0e0e0;
+    margin-top: 1rem;
+}
+
+.contact {
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-size: 1.25rem;
+    padding: 0 clamp(1rem, 4vw, 3rem);
+    margin-bottom: 2rem;
+}
+
+.link-facebook {
+    background-color: #ffffff;
+    border-radius: 2.5rem;
+    margin-top: 1.25rem;
+    margin-left: 0.625rem;
+}
+
+/* เป็น grid เเถวเดียวหลักเดียว */
+@media (max-width: 1000px) {
+    .menu {
+        grid-template-columns: 1fr;
+    }
+}
