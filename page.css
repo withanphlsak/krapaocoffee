@@ -228,6 +228,7 @@ img {
 .img-grid {
     width: 100%;
     height: 35.625rem;
+    cursor: pointer;
 
 }
 
@@ -247,6 +248,61 @@ img {
     font-size: clamp(2rem, 3vw, 2rem);
     margin-top: 2rem;
     font-weight: bold;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    overflow-y: auto;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    backdrop-filter: blur(5px)
+}
+
+.modal-content {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    object-fit: contain;
+    animation: zoomIn 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.close-btn {
+    position: absolute;
+    top: -6px;
+    margin-top: -1rem;
+    right: 35px;
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    user-select: none;
+}
+
+.close-btn:hover {
+    color: #f4b97a;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .loca-link {
